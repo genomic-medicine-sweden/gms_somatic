@@ -11,9 +11,9 @@ assignees: ''
 A clear and concise description of which bioinformatic tool or software you want to add.
 Include the following:
 - Installation via:
-  - [ ] conda
-  - [ ] pip
-  - [ ] other (make, container, etc)
+  - conda
+  - pip
+  - other (make, container, etc)
 
 **Additional context**
 Add additional context on motivation, why we need this software.
