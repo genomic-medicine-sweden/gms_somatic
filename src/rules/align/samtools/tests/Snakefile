@@ -1,4 +1,4 @@
 include: "../samtools.smk"
 
 rule all:
-  input: "a.bam.bai"
+  input: ["a.sorted.bam.stats", "a.sorted.bam.bai"]
