@@ -1,0 +1,4 @@
+include: "../samtools.smk"
+
+rule all:
+  input: "a.bam.bai"
