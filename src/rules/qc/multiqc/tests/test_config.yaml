@@ -1,0 +1,26 @@
+---
+ID:
+  "test_id"
+
+# Output form rules named under 'QC_rules' will be included as input for multiQC
+QC_rules:
+  fake_fastqc:
+    output: html
+    # Observe that the names given to additional affixes needs to match wildcards in the rule
+    read_nr:
+      - R1
+      - R2
+  fake_samstats:
+    output: csv
+
+samples:
+  - TestSample1
+  - TestSample2
+  - TestSample3
+  - TestSample4
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+path_from_root = "src/rules/qc/multiqc/tests/"
+configfile: path_from_root + "test_config.yaml"
+
+rule all:
+    input:
+         "QC/MultiQC/multiqc_{}.html".format(config["ID"])
+
+rule fake_fastqc:
+    input:
+         fastq = path_from_root + "mock_data/{sample}_{read_nr}.fastq"
+    output:
+        html = path_from_root + "mock_data/{sample}_{read_nr}.html",
+        csv  = path_from_root + "mock_data/{sample}_{read_nr}.csv"
+    shell:
+        """
+        touch {output.html}
+        touch {output.csv}
+        """
+
+rule fake_samstats:
+    input:
+        bam = path_from_root +"mock_data/{sample}.bam"
+    output:
+        csv = path_from_root +"mock_data/{sample}_samtools.csv"
+    shell:
+        """
+        touch {output.csv}
+        """
+
+# Include statement here in order to include both rules above in 'rules'
+include: "../multiqc.smk"
