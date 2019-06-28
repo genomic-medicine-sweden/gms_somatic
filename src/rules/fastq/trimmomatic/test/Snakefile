@@ -1,0 +1,6 @@
+configfile: "config.yaml"
+
+include: "../trimmomatic.smk"
+
+rule all:
+  input: ["trimmed/sample1.lane1.R1.trimmomatic.fastq.gz", "trimmed/sample1.lane1.R2.trimmomatic.fastq.gz"]
