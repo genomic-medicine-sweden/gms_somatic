@@ -1,0 +1,4 @@
+include: "../samtools_stats.smk"
+
+rule all:
+  input: ["alignment/a.0.stats"]
