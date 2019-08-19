@@ -1,0 +1,6 @@
+---
+trimmomatic:
+  trimmer:
+    - "TRAILING:3"
+    - "MINLEN:36"
+  extra_settings: "ILLUMINACLIP:TruSeq3-PE.fa:2:30:10"
