@@ -1,11 +1,6 @@
 # vim: syntax=python tabstop=4 expandtab
 # coding: utf-8
 
-__author__="Patrik Smeds"
-__copyright__ = "Copyright 2019, Patrik Smeds"
-__email__ = "patrik.smeds@scilifelab.uu.se"
-__license__ = "MIT"
-
 """
 Require a config.yaml containing the following data, or a config dict with the
 corresponding data
@@ -48,7 +43,7 @@ except:
 
 _trimmomatic_output_r1_unpaired = "trimmed/{sample}.{part}.R1.trimmomatic.unpaired.fastq.gz"
 try:
-    _trimmomatic_output_r1 = trimmomatic_output_r1_unpaired
+    _trimmomatic_output_r1_unpaired = trimmomatic_output_r1_unpaired
 except:
     pass
 
