@@ -1,0 +1,4 @@
+include: "../samtools_sort.smk"
+
+rule all:
+  input: ["alignment/a.0.sorted.bam"]

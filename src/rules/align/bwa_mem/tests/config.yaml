@@ -1,0 +1,7 @@
+---
+
+samples: samples.tsv
+
+reference_genome: /path/genome
+
+bwa_extra_settings: ""
