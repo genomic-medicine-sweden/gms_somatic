@@ -1,0 +1,10 @@
+import pandas as pd
+
+configfile: "config.yaml"
+
+samples = pd.read_csv(config["samples"], index_col="sample" , sep="\t")
+
+include: "../bwa_mem.smk"
+
+rule all:
+  input: ["alignment/sample1.lane1.bam"]
