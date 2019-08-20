@@ -12,6 +12,3 @@ include: "../rules/align/samtools/index/samtools_index.smk"
 
 samtools_stats_input = rules.bwa_mem.output[0]
 include: "../rules/align/samtools/stats/samtools_stats.smk"
-
-samtools_index_input = rules.bwa_mem.output[0]
-include: "../rules/align/samtools/index/samtools_index.smk"

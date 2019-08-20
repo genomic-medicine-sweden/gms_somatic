@@ -1,0 +1,24 @@
+BootStrap: yum
+OSVersion: 7
+MirrorURL: http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/os/$basearch/
+Include: yum wget
+
+%environment
+    PATH=/opt/conda/bin:/usr/bin:$PATH
+
+%setup
+
+%post
+    ## Tools used to install software
+    yum install -y epel-release
+    yum install -y wget pigz
+    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+    bash miniconda.sh -b -u -p /usr
+    hash -r
+    conda config --set always_yes yes --set changeps1 no
+
+    ## Need to downgrade python due to cython and compiled files for datrie
+    conda install -c bioconda bwa=0.7.12
+    conda install -c bioconda samtools=1.9
+    conda install -c bioconda trimmomatic=0.35
+%files
