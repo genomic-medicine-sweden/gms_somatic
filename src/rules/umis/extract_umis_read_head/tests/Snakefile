@@ -1,0 +1,7 @@
+configfile: "config.yaml"
+
+include: "../extract_umis_read_head.smk"
+
+rule all:
+  input: "umis/sample1.lane1.R1.UMIs%s.fastq" % config['umi_length'],
+            "umis/sample1.lane1.R2.UMIs%s.fastq" % config['umi_length']

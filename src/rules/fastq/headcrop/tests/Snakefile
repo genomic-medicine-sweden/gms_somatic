@@ -1,0 +1,7 @@
+configfile: "config.yaml"
+
+include: "../headcrop_fastq.smk"
+
+rule all:
+  input: "fastq/sample1.lane1.R1.headcrop%s.fastq.gz" % config['headcrop_num_bases'],
+            "fastq/sample1.lane1.R2.headcrop%s.fastq.gz" % config['headcrop_num_bases']

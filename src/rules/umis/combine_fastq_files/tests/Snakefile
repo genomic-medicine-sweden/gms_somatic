@@ -1,0 +1,6 @@
+configfile: "config.yaml"
+
+include: "../combine_fastq_files.smk"
+
+rule all:
+  input: "umis/sample1.lane1.R1R2.UMIs%s.fastq" % config['umi_length']

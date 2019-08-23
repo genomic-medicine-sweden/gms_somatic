@@ -1,0 +1,6 @@
+configfile: "config.yaml"
+
+include: "../annotate_bam_with_umi.smk"
+
+rule all:
+  input: "alignment/sample1.lane1.umiAnnoBam.bam"
