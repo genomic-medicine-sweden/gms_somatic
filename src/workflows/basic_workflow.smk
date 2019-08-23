@@ -1,5 +1,10 @@
 from os import path
 
+wildcard_constraints:
+    sample="^[A-Za-z0-9-]+$",
+    read="^[R12]+$",
+    part="^[A-Za-z0-9]+$"
+
 trimmomatic_input_r1=lambda wildcards: units.loc[(path.split(wildcards.sample)[-1], wildcards.part), ['fq1']].dropna()[0]
 trimmomatic_input_r2=lambda wildcards: units.loc[(path.split(wildcards.sample)[-1], wildcards.part), ['fq2']].dropna()[0]
 include: "../rules/fastq/trimmomatic/trimmomatic.smk"

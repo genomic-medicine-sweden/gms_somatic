@@ -54,7 +54,7 @@ try:
 except:
     pass
 
-_rg_information_function = lambda wildcards: "'@RG\tID:%s_%s\tSM:%s\tPL:%s'" % (get_now(),wildcards.sample + "_" + wildcards.part, wildcards.sample + "_" + wildcards.part, samples['platform'][wildcards.sample])
+_rg_information_function = lambda wildcards: r"'@RG\tID:%s_%s\tSM:%s\tPL:%s'" % (get_now(),wildcards.sample + "_" + wildcards.part, wildcards.sample + "_" + wildcards.part, samples['platform'][wildcards.sample])
 try:
     _rg_information_function = rg_information_function
 except:

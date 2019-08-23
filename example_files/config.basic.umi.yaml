@@ -1,0 +1,23 @@
+---
+
+singularity_image: /path/basic.simg
+
+samples: samples.tsv
+
+units: units.tsv
+
+headcrop_num_bases: 8
+
+umi_length: 8
+
+reference_genome: /path/hg19.with.mt.fasta
+
+trimmomatic:
+  trimmer:
+     - LEADING:3
+     - TRAILING:3
+  illuminaclip: TruSeq3-PE.fa:2:30:10
+
+bwa_extra_settings: ""
+
+notification_mail: "my_mail@gmail.com"
