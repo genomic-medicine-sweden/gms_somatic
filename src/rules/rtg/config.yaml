@@ -1,0 +1,8 @@
+# Samples
+sdf:
+    - /medstore/External_References/hs37d5/hs37d5.fa
+bam:
+    - /medstore/Development/GMS_solid_tumor/twist_gms_evaluation/sentieon_11_1544622569/bamfiles/11_RECAL.bam
+bed: 
+    - /medstore/Development/GMS_solid_tumor/twist_gms_evaluation/Twist_CancerPanel_CG001_BED.bed
+
